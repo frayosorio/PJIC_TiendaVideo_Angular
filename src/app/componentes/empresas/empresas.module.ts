@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EmpresasComponent } from './paginas/empresas/empresas.component';
+import { EmpresasRoutingModule } from './empresas-routing.module';
+import { ReferenciasMaterialModule } from 'src/app/referencias-material.module';
 
 
 
@@ -9,7 +11,10 @@ import { EmpresasComponent } from './paginas/empresas/empresas.component';
     EmpresasComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    EmpresasRoutingModule,
+    ReferenciasMaterialModule,
+    
   ]
 })
 export class EmpresasModule { }
