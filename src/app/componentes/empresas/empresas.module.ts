@@ -5,12 +5,14 @@ import { EmpresasRoutingModule } from './empresas-routing.module';
 import { ReferenciasMaterialModule } from 'src/app/referencias-material.module';
 import { FormsModule } from '@angular/forms';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { EmpresaEditarComponent } from './paginas/empresa-editar/empresa-editar.component';
 
 
 
 @NgModule({
   declarations: [
-    EmpresasComponent
+    EmpresasComponent,
+    EmpresaEditarComponent
   ],
   imports: [
     CommonModule,

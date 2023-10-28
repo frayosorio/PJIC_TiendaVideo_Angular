@@ -20,4 +20,14 @@ export class EmpresaService {
     return this.http.get<Empresa[]>(urlT);
   }
 
+  public agregar(empresa: Empresa): Observable<Empresa> {
+    let urlT = `${this.url}/agregar`;
+    return this.http.post<Empresa>(urlT, empresa);
+  }
+
+  public modificar(empresa: Empresa): Observable<Empresa> {
+    let urlT = `${this.url}/modificar`;
+    return this.http.put<Empresa>(urlT, empresa);
+  }
+
 }
