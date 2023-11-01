@@ -19,4 +19,5 @@ export class PaisService {
     let urlT = `${this.url}/listar`;
     return this.http.get<Pais[]>(urlT);
   }
+
 }

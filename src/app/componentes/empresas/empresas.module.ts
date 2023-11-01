@@ -6,13 +6,15 @@ import { ReferenciasMaterialModule } from 'src/app/referencias-material.module';
 import { FormsModule } from '@angular/forms';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { EmpresaEditarComponent } from './paginas/empresa-editar/empresa-editar.component';
+import { DecidirComponent } from '../decidir/decidir.component';
 
 
 
 @NgModule({
   declarations: [
     EmpresasComponent,
-    EmpresaEditarComponent
+    EmpresaEditarComponent,
+    DecidirComponent
   ],
   imports: [
     CommonModule,

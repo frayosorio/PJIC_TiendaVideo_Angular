@@ -7,6 +7,7 @@ import { EmpresaEditarComponent } from '../empresa-editar/empresa-editar.compone
 import { Pais } from 'src/app/entidades/pais';
 import { PaisService } from 'src/app/servicios/pais.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { DecidirComponent } from 'src/app/componentes/decidir/decidir.component';
 
 
 @Component({
@@ -125,7 +126,36 @@ export class EmpresasComponent implements OnInit {
   }
 
   public verificarEliminar() {
+    if (this.empresaSeleccionada != null) {
+      const dialogRef = this.dialogService.open(DecidirComponent, {
+        width: '400px',
+        height: '200px',
+        data: {
+          titulo: `Eliminando registro de la empresa [${this.empresaSeleccionada.nombre}]`,
+          mensaje: "Está seguro?",
+          id: this.empresaSeleccionada.id
+        }
+      });
 
+      dialogRef.afterClosed().subscribe(
+        datos => {
+          if (datos) {
+            this.empresaService.eliminar(datos.id).subscribe(
+              respuesta => {
+                this.listar();
+                window.alert("Los datos de la Empresa fueron eliminados");
+              },
+              (error: HttpErrorResponse) => {
+                window.alert(`Error eliminando la Empresa: [${error.message}]`);
+              }
+            );
+          }
+        }
+      );
+    }
+    else {
+      window.alert("Debe seleccionar una Empresa");
+    }
   }
 
   public onActivate(event: any) {
