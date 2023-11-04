@@ -57,7 +57,19 @@ export class EmpresasComponent implements OnInit {
   }
 
   public buscar() {
-
+    if (this.textoBusqueda.length > 0) {
+      this.empresaService.buscar(this.textoBusqueda).subscribe(
+        respuesta => {
+          this.empresas = respuesta;
+        },
+        error => {
+          window.alert(error.message);
+        }
+      );
+    }
+    else {
+      this.listar();
+    }
   }
 
   public agregar() {
