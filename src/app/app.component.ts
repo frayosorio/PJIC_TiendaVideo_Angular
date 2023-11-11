@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TiendaVideo';
+
+  public opciones = [
+    { titulo: "Paises", url: "paises", icono: "assets/iconos/Pais.png" },
+    { titulo: "Empresas", url: "empresas", icono: "assets/iconos/Empresa.png" },
+    { titulo: "Titulos", url: "titulos", icono: "assets/iconos/Titulo.png" }
+  ];
+
+
 }

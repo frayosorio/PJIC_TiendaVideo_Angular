@@ -8,19 +8,25 @@ import { EmpresasModule } from './componentes/empresas/empresas.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TitulosModule } from './componentes/titulos/titulos.module';
+import { DecidirComponent } from './componentes/decidir/decidir.component';
+import { ReferenciasMaterialModule } from './referencias-material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent
+    InicioComponent,
+    DecidirComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     EmpresasModule,
+    TitulosModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReferenciasMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

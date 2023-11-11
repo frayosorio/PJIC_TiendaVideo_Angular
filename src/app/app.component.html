@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <mat-sidenav>
+        <mat-nav-list>
+            <div *ngFor="let opcion of opciones">
+                <button mat-icon-button [routerLink]="opcion.url">
+                    <img [src]="opcion.icono">
+                </button>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+    
+</mat-sidenav-container>

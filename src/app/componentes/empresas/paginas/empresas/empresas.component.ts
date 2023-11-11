@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ColumnMode, SelectionType } from '@swimlane/ngx-datatable';
-import { Empresa } from 'src/app/entidades/Empresa';
 import { EmpresaService } from 'src/app/servicios/empresa.service';
 import { EmpresaEditarComponent } from '../empresa-editar/empresa-editar.component';
 import { Pais } from 'src/app/entidades/pais';
 import { PaisService } from 'src/app/servicios/pais.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { DecidirComponent } from 'src/app/componentes/decidir/decidir.component';
+import { Empresa } from 'src/app/entidades/Empresa';
 
 
 @Component({
